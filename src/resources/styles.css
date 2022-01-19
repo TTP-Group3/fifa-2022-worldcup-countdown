@@ -75,12 +75,12 @@ footer .footer_copyright {
 
 
 .carrousel_wrapper {
-    height:700px;
+    height: 100vh;
+    width: 100%;
     overflow: hidden;
 }
 
 .carrousel_image {
-
     background-size: cover !important;
 }
 
