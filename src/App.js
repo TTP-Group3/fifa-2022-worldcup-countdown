@@ -1,45 +1,43 @@
-import React, { Component } from 'react';
-import './resources/styles.css';
+import React from 'react';
 import { Element } from 'react-scroll';
+import './resources/styles.css';
 
 import Header from './components/header_footer/Header.js';
-import Featured from './components/featured';
-import VenueInfo from './components/venueInfo/';
-import About from './components/about/about.js';
-import Linker from './components/linker/linker.js';
-import Map from './components/map/map.js';
-import AboutUs from './components/aboutus/AboutUs.js';
+import Featured from './components/featured/index';
+import VenueInfo from './components/venueInfo/index';
+import About from './components/about/about';
+import Linker from './components/linker/linker';
+import Map from './components/map/map';
+import AboutUs from './components/aboutus/AboutUs';
 
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App" style={{ height:"1500px", background:'#444444'}}>
-        <Header/>
-        <Element name="featured">
-          <Featured/>
-        </Element>
+function App() {
+  return (
+    <div className="App" style={{ height:"1500px" }}>
+      <Header />
+      <Element name="featured">
+        <Featured />
+      </Element>
 
-        <Element name="venueInfo">
-          <VenueInfo/>
-        </Element>
+      <Element name="venueInfo">
+        <VenueInfo />
+      </Element>
 
-        <Element name="highlight">
-          <About/>
-        </Element>
+      <Element name="highlight">
+        <About />
+      </Element>
 
-        <Element name="pricing">
-          <Linker/>
-        </Element>
+      <Element name="pricing">
+        <Linker />
+      </Element>
 
-        <Element name="location">
-          <Map/>
-        </Element>
+      <Element name="location">
+        <Map />
+      </Element>
 
-        <AboutUs/>
-      </div>
-    );
-  };
+      <AboutUs />
+    </div>
+  );
 }
 
 export default App;
